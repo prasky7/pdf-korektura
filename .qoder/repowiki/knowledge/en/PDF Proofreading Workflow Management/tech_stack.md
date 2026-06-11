@@ -1,0 +1,5 @@
+- **Laravel 12** with **Livewire 3** for full-stack reactive UI.
+- **Spatie Laravel Permission** for RBAC.
+- **LDAPRecord-Laravel** for Active Directory/LDAP authentication integration.
+- **Spatie PDF-to-Text** for potential text extraction capabilities.
+- **SQLite** used as the default database in development/testing environments.

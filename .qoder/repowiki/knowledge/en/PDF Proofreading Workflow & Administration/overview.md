@@ -1,0 +1,1 @@
+Orchestrates PDF document lifecycle management through reactive Livewire components, enforcing role-based access control and state-machine transitions.

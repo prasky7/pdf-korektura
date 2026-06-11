@@ -1,0 +1,4 @@
+- Livewire components use the `#[Layout('layouts.app')]` attribute to define their wrapping layout instead of returning it in the render method.
+- All significant user actions are logged via `ActivityLogService::log()` immediately after state changes in both Controllers and Livewire components.
+- Models define scope methods (e.g., `scopeUnassigned`, `scopeNotArchived`) to encapsulate common query constraints for workflow states.
+- Role checks are performed using helper methods on the User model (`isAdmin()`, `isEditor()`, `isProofreader()`) rather than direct string comparisons.

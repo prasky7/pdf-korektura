@@ -1,0 +1,3 @@
+- **LDAP Configuration**: Requires specific environment variables (`LDAP_HOST`, `LDAP_BASE_DN`, etc.) if using AD/LDAP auth; otherwise, falls back to local user accounts.
+- **Database Initialization**: Uses SQLite by default (`database/database.sqlite`); migrations create tables for users, permissions, titles, PDFs, versions, and activity logs.
+- **Storage Link**: Requires `php artisan storage:link` if serving files via public symlink, though current implementation uses direct controller-served downloads/previews.

@@ -1,0 +1,1 @@
+Manages the lifecycle of PDF documents through editor upload, proofreader assignment, correction, and archival with role-based access control.

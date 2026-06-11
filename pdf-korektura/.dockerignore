@@ -1,0 +1,53 @@
+# Version control
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies (will be installed in Docker)
+vendor/
+node_modules/
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+.dockerignore
+
+# Logs & cache
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Testing
+tests/
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache/
+
+# Development tools
+.php-cs-fixer.php
+pint.json
+
+# Database
+database/*.sqlite
+database/*.sqlite-journal
+
+# Misc
+*.log
+*.md
+screenshot*

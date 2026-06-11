@@ -1,0 +1,6 @@
+- **Framework & UI**: Built on Laravel 12 using Livewire 3 for reactive, server-side rendered components (e.g., `PdfUpload`, `PdfPool`, `PdfDetail`) that replace traditional AJAX/SPA patterns.
+- **Role-Based Access Control (RBAC)**: Implements a three-tier role system (`admin`, `editor`, `proofreader`) using `spatie/laravel-permission`. Routes and UI components are guarded by middleware checking these roles.
+- **Domain Model**: Centers around `PdfDocument` (metadata, status, assignment) and `PdfVersion` (file storage, history). Status transitions (`uploaded` -> `in_progress` -> `completed`) drive the workflow.
+- **Service Layer**: A centralized `ActivityLogService` captures all significant actions (upload, assign, view, download) for audit trails, decoupling logging logic from controllers and Livewire components.
+- **Authentication**: Supports dual authentication strategies: local database users and LDAP/Active Directory integration via `directorytree/ldaprecord-laravel`, allowing flexible enterprise deployment.
+- **File Storage**: PDFs are stored in the local filesystem with versioned paths organized by title and date, managed through Laravel's Storage facade.

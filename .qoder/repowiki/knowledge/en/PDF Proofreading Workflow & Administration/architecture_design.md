@@ -1,0 +1,4 @@
+- Built on Laravel 11 with Livewire 3 for reactive UI components, separating concerns into Models (PdfDocument, PdfVersion), Livewire Components (PdfUpload, PdfPool), and Services (ActivityLogService).
+- Implements a state-machine workflow for PDFs (uploaded -> in_progress -> returned/completed) enforced by Eloquent scopes and status constants in PdfDocument.
+- Integrates Spatie Laravel Permission for RBAC (Admin, Editor, Proofreader) and DirectoryTree LdapRecord for dual-mode authentication (Local/AD).
+- Uses a centralized ActivityLogService to track all state transitions and user actions across the system.

@@ -1,0 +1,13 @@
+# Project Architecture
+
+This is a React application with:
+
+- Components in `e:/Dev/TEST01/pdf-korektura/`
+- API routes in `e:/Dev/TEST01/pdf-korektura/`
+- State management using Redux in `e:/Dev/TEST01/pdf-korektura/`
+
+## Coding Standards
+
+- Use TypeScript for all new files
+- Follow the existing naming conventions
+- Write tests for all new features

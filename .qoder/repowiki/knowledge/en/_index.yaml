@@ -1,0 +1,208 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+exported_at: "2026-06-10T13:01:43Z"
+modules:
+    "":
+        dir_name: PDF Proofreading Workflow & Administration
+        title: PDF Proofreading Workflow & Administration
+        scope:
+            - composer.bat
+            - .qoder\plans\PDF_Proofreading_System_751314f5.md
+            - .qoder\repowiki\en\content\API Reference\API Reference.md
+            - .qoder\repowiki\en\content\API Reference\Administrative Endpoints.md
+            - .qoder\repowiki\en\content\API Reference\Authentication Endpoints.md
+            - .qoder\repowiki\en\content\API Reference\Document Management Endpoints.md
+            - .qoder\repowiki\en\content\API Reference\Workflow Endpoints.md
+            - .qoder\repowiki\en\content\Administrative Features\Administrative Features.md
+            - .qoder\repowiki\en\content\Administrative Features\Audit Logging & Activity Tracking.md
+            - .qoder\repowiki\en\content\Administrative Features\Publication Title Management.md
+            - .qoder\repowiki\en\content\Administrative Features\System Oversight & Monitoring.md
+            - .qoder\repowiki\en\content\Administrative Features\User Management.md
+            - .qoder\repowiki\en\content\Authentication & Authorization\Authentication & Authorization.md
+            - .qoder\repowiki\en\content\Authentication & Authorization\Multi-Provider Authentication.md
+            - .qoder\repowiki\en\content\Authentication & Authorization\Role-Based Access Control.md
+            - .qoder\repowiki\en\content\Authentication & Authorization\Security Configuration.md
+            - .qoder\repowiki\en\content\Authentication & Authorization\Session Management.md
+            - .qoder\repowiki\en\content\Configuration & Environment.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\Activity Log Model.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\Core Models.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\PDF Document Model.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\PDF Version Model.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\Title Model.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Core Models\User Model.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Database Schema & Models.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Entity Relationships & Constraints.md
+            - .qoder\repowiki\en\content\Database Schema & Models\Migration Schemas.md
+            - .qoder\repowiki\en\content\Deployment & Operations.md
+            - .qoder\repowiki\en\content\Document Management System\Document Lifecycle Management.md
+            - .qoder\repowiki\en\content\Document Management System\Document Management System.md
+            - .qoder\repowiki\en\content\Document Management System\File Storage and Organization.md
+            - .qoder\repowiki\en\content\Document Management System\PDF Upload and Processing.md
+            - .qoder\repowiki\en\content\Document Management System\Version Control System.md
+            - .qoder\repowiki\en\content\Getting Started.md
+            - .qoder\repowiki\en\content\Project Overview\Key Features & Benefits.md
+            - .qoder\repowiki\en\content\Project Overview\Project Overview.md
+            - .qoder\repowiki\en\content\Project Overview\System Architecture.md
+            - .qoder\repowiki\en\content\Project Overview\Technology Stack.md
+            - .qoder\repowiki\en\content\Project Overview\User Roles & Permissions.md
+            - .qoder\repowiki\en\content\Project Overview\Workflow Processes.md
+            - .qoder\repowiki\en\content\Testing & Development.md
+            - .qoder\repowiki\en\content\User Interface Components\Administrative Interface Components.md
+            - .qoder\repowiki\en\content\User Interface Components\Dashboard Components.md
+            - .qoder\repowiki\en\content\User Interface Components\Document Management Interface.md
+            - .qoder\repowiki\en\content\User Interface Components\Layout and Styling Framework.md
+            - .qoder\repowiki\en\content\User Interface Components\User Interface Components.md
+            - .qoder\repowiki\en\content\User Interface Components\Workflow Interface Components.md
+            - .qoder\repowiki\en\content\Workflow Management\Administrative Workflow Oversight.md
+            - .qoder\repowiki\en\content\Workflow Management\Deadline Management.md
+            - .qoder\repowiki\en\content\Workflow Management\Document Assignment System.md
+            - .qoder\repowiki\en\content\Workflow Management\Status Tracking & Transitions.md
+            - .qoder\repowiki\en\content\Workflow Management\Workflow Management.md
+            - .qoder\repowiki\en\meta\repowiki-metadata.json
+            - .qoder\repowiki\knowledge\en\PDF Proofreading Workflow & Administration\_module.yaml
+            - .qoder\repowiki\knowledge\en\PDF Proofreading Workflow & Administration\architecture_design.md
+            - .qoder\repowiki\knowledge\en\PDF Proofreading Workflow & Administration\coding_conventions.md
+            - .qoder\repowiki\knowledge\en\PDF Proofreading Workflow & Administration\overview.md
+            - .qoder\repowiki\knowledge\en\PDF Proofreading Workflow & Administration\tech_stack.md
+            - .qoder\repowiki\knowledge\en\_index.yaml
+            - composer.phar
+            - dashboard-fixed.png
+            - dashboard-white.png
+            - pdf-korektura\.env
+            - pdf-korektura\.env.example
+            - pdf-korektura\.gitignore
+            - pdf-korektura\app\Console\Commands\CleanupOldRecords.php
+            - pdf-korektura\app\Http\Controllers\AdminController.php
+            - pdf-korektura\app\Http\Controllers\AuthController.php
+            - pdf-korektura\app\Http\Controllers\Controller.php
+            - pdf-korektura\app\Http\Controllers\PdfDocumentController.php
+            - pdf-korektura\app\Livewire\Admin\Archive.php
+            - pdf-korektura\app\Livewire\Admin\AuditLog.php
+            - pdf-korektura\app\Livewire\Admin\TitleManagement.php
+            - pdf-korektura\app\Livewire\Admin\UserManagement.php
+            - pdf-korektura\app\Livewire\Dashboard.php
+            - pdf-korektura\app\Livewire\MyAssignments.php
+            - pdf-korektura\app\Livewire\PdfDetail.php
+            - pdf-korektura\app\Livewire\PdfPool.php
+            - pdf-korektura\app\Livewire\PdfUpload.php
+            - pdf-korektura\app\Models\ActivityLog.php
+            - pdf-korektura\app\Models\PdfDocument.php
+            - pdf-korektura\app\Models\PdfVersion.php
+            - pdf-korektura\app\Models\Title.php
+            - pdf-korektura\app\Models\User.php
+            - pdf-korektura\app\Providers\AppServiceProvider.php
+            - pdf-korektura\app\Services\ActivityLogService.php
+            - pdf-korektura\artisan
+            - pdf-korektura\bootstrap\app.php
+            - pdf-korektura\bootstrap\cache\packages.php
+            - pdf-korektura\bootstrap\cache\services.php
+            - pdf-korektura\bootstrap\providers.php
+            - pdf-korektura\composer-setup.php
+            - pdf-korektura\composer.json
+            - pdf-korektura\composer.lock
+            - pdf-korektura\composer.phar
+            - pdf-korektura\config\app.php
+            - pdf-korektura\config\auth.php
+            - pdf-korektura\config\database.php
+            - pdf-korektura\config\filesystems.php
+            - pdf-korektura\config\permission.php
+            - pdf-korektura\database\database.sqlite
+            - pdf-korektura\database\migrations\0001_01_01_000000_create_users_table.php
+            - pdf-korektura\database\migrations\0001_01_01_000001_create_cache_table.php
+            - pdf-korektura\database\migrations\0001_01_01_000002_create_jobs_table.php
+            - pdf-korektura\database\migrations\2024_06_10_100000_create_permission_tables.php
+            - pdf-korektura\database\migrations\2024_06_10_110000_create_titles_table.php
+            - pdf-korektura\database\migrations\2024_06_10_120000_create_pdf_documents_table.php
+            - pdf-korektura\database\migrations\2024_06_10_130000_create_pdf_versions_table.php
+            - pdf-korektura\database\migrations\2024_06_10_140000_create_activity_logs_table.php
+            - pdf-korektura\database\seeders\DatabaseSeeder.php
+            - pdf-korektura\phpunit.xml
+            - pdf-korektura\public\.htaccess
+            - pdf-korektura\public\index.php
+            - pdf-korektura\resources\views\auth\login.blade.php
+            - pdf-korektura\resources\views\layouts\app.blade.php
+            - pdf-korektura\resources\views\livewire\admin\archive.blade.php
+            - pdf-korektura\resources\views\livewire\admin\audit-log.blade.php
+            - pdf-korektura\resources\views\livewire\admin\title-management.blade.php
+            - pdf-korektura\resources\views\livewire\admin\user-management.blade.php
+            - pdf-korektura\resources\views\livewire\dashboard.blade.php
+            - pdf-korektura\resources\views\livewire\my-assignments.blade.php
+            - pdf-korektura\resources\views\livewire\pdf-detail.blade.php
+            - pdf-korektura\resources\views\livewire\pdf-pool.blade.php
+            - pdf-korektura\resources\views\livewire\pdf-upload.blade.php
+            - pdf-korektura\routes\console.php
+            - pdf-korektura\routes\web.php
+            - pdf-korektura\storage\app\livewire-tmp\5rTq1PYIPVqMPkwS0K5WbH7h8DCmg1-metaSURPUyDigKIgUMWZw61icmFtIOKeniBQbHplxYgg4oCiIFbFoWVjaG55IGrDrXpkbsOtIMWZw6FkeSDigKIgVnlobGVkw6Fuw60gc3BvamVuw60ucGRm-.pdf
+            - pdf-korektura\storage\app\pdfs\MFDnes\2026-06\original\6a29574351750_IDOS • Příbram ➞ Plzeň • Všechny jízdní řády • Vyhledání spojení.pdf
+            - pdf-korektura\storage\framework\cache\facade-1e06026dbe325cba543b2306bd7e55d66d31e4c1.php
+            - pdf-korektura\storage\framework\views\1251c442eb26ef135b04733bf0761154.php
+            - pdf-korektura\storage\framework\views\265a55f25f7d22bfc3bca00a0ca93556.php
+            - pdf-korektura\storage\framework\views\321332d34334e9f215af3a57f363454f.php
+            - pdf-korektura\storage\framework\views\3442eee4fc441b92fe02f3f3fe066500.php
+            - pdf-korektura\storage\framework\views\3460a7fbace86a83bed0b8730c769f1e.php
+            - pdf-korektura\storage\framework\views\39053d365b0b9e6a1f6dea7f316f737c.php
+            - pdf-korektura\storage\framework\views\44cd589e66e8eff731b4193e32c3ad23.php
+            - pdf-korektura\storage\framework\views\45146f627b4ba71881c2bf4d36706955.php
+            - pdf-korektura\storage\framework\views\467f96ef9ae330a7ff219ea274193915.php
+            - pdf-korektura\storage\framework\views\4943bc92ebba41e8b0e508149542e0ad.blade.php
+            - pdf-korektura\storage\framework\views\4d99ccbfcc431944fe6ce29f59943879.php
+            - pdf-korektura\storage\framework\views\519300bde7af0549c009bb6441278529.php
+            - pdf-korektura\storage\framework\views\543718e02c52de724c2ac8b68673ce7a.php
+            - pdf-korektura\storage\framework\views\586d935488f5a20c97c364312fc94b03.php
+            - pdf-korektura\storage\framework\views\5d3943d5c66874328b12768ba4959176.php
+            - pdf-korektura\storage\framework\views\5fa1f9e157f8175f72f8a41db7b5fe03.php
+            - pdf-korektura\storage\framework\views\65ad73c190abe92e7015ad1147b956db.php
+            - pdf-korektura\storage\framework\views\668b2b1f4756c2a4116e46960e927c63.php
+            - pdf-korektura\storage\framework\views\6e134a09bf05e43e1ad7f4c83c372185.php
+            - pdf-korektura\storage\framework\views\7118150cd4dce904d964a889e8e425d6.php
+            - pdf-korektura\storage\framework\views\7161979bbbedf2d6165512ddbf1a1a83.php
+            - pdf-korektura\storage\framework\views\728a185098744a67944a58d72803a82d.php
+            - pdf-korektura\storage\framework\views\771266ea83f3500281cdb92f027bd6de.php
+            - pdf-korektura\storage\framework\views\7818757fac66171ca09b5f605d5be3df.php
+            - pdf-korektura\storage\framework\views\7c018d31403e82226efb984059621a8f.php
+            - pdf-korektura\storage\framework\views\81d7d5ba5a80cbba441380e073401a8b.php
+            - pdf-korektura\storage\framework\views\83d23158c2dbde23e013d7b696cab015.php
+            - pdf-korektura\storage\framework\views\8974207864a49000bac73dd7509a5936.php
+            - pdf-korektura\storage\framework\views\8dcc99cc2a29f30e98bac434ec70a0aa.php
+            - pdf-korektura\storage\framework\views\8f0ba0813e16b828e659c26151036005.php
+            - pdf-korektura\storage\framework\views\98858f966252db1ea4d531f28ead8114.php
+            - pdf-korektura\storage\framework\views\998e99e904c8f8d398d4319e695cfe1e.php
+            - pdf-korektura\storage\framework\views\9a94cbf82783919a066dd031547c80a3.php
+            - pdf-korektura\storage\framework\views\a0bc9faa866730aac954a44e16f74fd6.php
+            - pdf-korektura\storage\framework\views\a1a64526b7423da25f476dfb2a20be4f.php
+            - pdf-korektura\storage\framework\views\a5a794162803be83d7990be7f82cff49.php
+            - pdf-korektura\storage\framework\views\ab718a52597327dfe8dab7f9c8b82df3.php
+            - pdf-korektura\storage\framework\views\b521e4e1857b3590d2027c6acb4b926b.php
+            - pdf-korektura\storage\framework\views\b62b461f29a07c3b7835bf90626b2317.php
+            - pdf-korektura\storage\framework\views\b8cd81362b7d259a06a8d71a0b525ef1.php
+            - pdf-korektura\storage\framework\views\ba6de37c7e5a8c5ba40b8866fc776f6b.php
+            - pdf-korektura\storage\framework\views\bdb1afb4335fa01ab04493b8b324e41d.php
+            - pdf-korektura\storage\framework\views\bf8db0ce0031cc942e0c87964ce834b4.php
+            - pdf-korektura\storage\framework\views\c5446dfc6b4647cc291a181f94492e8c.php
+            - pdf-korektura\storage\framework\views\c71120ffeda3287204ea0ec322a67b82.php
+            - pdf-korektura\storage\framework\views\d4f7767ee83ac21635fe2f8bdfa388f0.php
+            - pdf-korektura\storage\framework\views\d8da6adb03e7baccbd51e6ff5c8b034d.php
+            - pdf-korektura\storage\framework\views\e8c59ba046fd32ebe1b2f84fdf8910da.php
+            - pdf-korektura\storage\framework\views\e9600c2edbb2be8f4dd09df54e7e4178.php
+            - pdf-korektura\storage\framework\views\eb24b38116105f97b86ecd2a1719dc69.php
+            - pdf-korektura\storage\framework\views\eb55f035a0f909bea5cafa1319bd4b71.php
+            - pdf-korektura\storage\framework\views\f35feb2de29eff539705f1f0887f1907.php
+            - pdf-korektura\storage\framework\views\f3df2dea791c02c8fb5d913b3cdbfaad.php
+            - pdf-korektura\storage\framework\views\f966e0a5ff9409ae1df7b46a35e323e9.php
+            - pdf-korektura\tests\TestCase.php
+            - pdf-upload-dnd.png
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    pdf_korektura:
+        dir_name: PDF Proofreading Workflow Management
+        title: PDF Proofreading Workflow Management
+        scope:
+            - pdf-korektura/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

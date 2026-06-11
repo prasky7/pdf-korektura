@@ -1,0 +1,1 @@
+Laravel 11, Livewire 3, Spatie Laravel Permission, DirectoryTree LdapRecord (Active Directory integration), Spatie PDF-to-Text.

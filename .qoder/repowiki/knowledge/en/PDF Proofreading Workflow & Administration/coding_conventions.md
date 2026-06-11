@@ -1,0 +1,4 @@
+- Livewire components handle both business logic and view rendering, using public properties for form state and protected $rules for validation.
+- Eloquent models define named scopes (e.g., scopeUnassigned, scopeNotArchived) to encapsulate common query constraints for workflow states.
+- State transitions and significant user actions are recorded via ActivityLogService::log() rather than direct model event listeners.
+- Role-based middleware is applied at the route group level to restrict access to specific Livewire pages and controller actions.

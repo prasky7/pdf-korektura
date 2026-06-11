@@ -1,0 +1,85 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pdf-korektura-app
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    environment:
+      APP_NAME: "PDF Korektura"
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_URL: http://localhost:8000
+      APP_TIMEZONE: Europe/Prague
+      APP_LOCALE: cs
+      APP_KEY: ${APP_KEY}
+      DB_CONNECTION: pgsql
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: pdf_korektura
+      DB_USERNAME: postgres
+      DB_PASSWORD: ${DB_PASSWORD:-admin}
+      SESSION_DRIVER: database
+      CACHE_STORE: database
+      QUEUE_CONNECTION: database
+    volumes:
+      - app-storage:/var/www/html/storage/app
+      - app-logs:/var/www/html/storage/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - pdf-korektura
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: pdf-korektura-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pdf_korektura
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d pdf_korektura"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - pdf-korektura
+
+  phppgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pdf-korektura-pgadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pdf-korektura.cz
+      PGADMIN_DEFAULT_PASSWORD: ${DB_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - pdf-korektura
+
+volumes:
+  app-storage:
+    driver: local
+  app-logs:
+    driver: local
+  pg-data:
+    driver: local
+  pgadmin-data:
+    driver: local
+
+networks:
+  pdf-korektura:
+    driver: bridge
