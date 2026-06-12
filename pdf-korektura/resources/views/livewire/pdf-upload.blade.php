@@ -1,5 +1,5 @@
 <div class="max-w-2xl mx-auto">
-    <h2 class="text-2xl font-bold text-slate-800 mb-6">Nahrát nové PDF</h2>
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Nahrát nové PDF</h2>
 
     <div class="bg-white rounded-lg shadow p-6">
         <form wire:submit="save" class="space-y-6">
@@ -33,8 +33,8 @@
                 <label class="block text-sm font-medium text-gray-700 mb-1">PDF soubor</label>
 
                 {{-- Drop Zone --}}
-                <div :class="dragging ? 'border-slate-500 bg-slate-50' : 'border-gray-300 bg-gray-50'"
-                     class="relative border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer hover:border-slate-400 hover:bg-slate-50">
+                <div :class="dragging ? 'border-orange-500 bg-orange-50' : 'border-gray-300 bg-gray-50'"
+                     class="relative border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer hover:border-orange-400 hover:bg-orange-50">
 
                     {{-- Hidden file input --}}
                     <input type="file"
@@ -53,9 +53,9 @@
                                 </svg>
                                 <div>
                                     <p class="text-base text-gray-600">
-                                        <span class="font-semibold text-slate-700">Přetáhněte PDF sem</span>
+                                        <span class="font-semibold text-orange-700">Přetáhněte PDF sem</span>
                                         <span class="text-gray-400 mx-1">nebo</span>
-                                        <span class="font-semibold text-slate-700 underline">klikněte pro výběr</span>
+                                        <span class="font-semibold text-orange-700 underline">klikněte pro výběr</span>
                                     </p>
                                     <p class="text-xs text-gray-400 mt-1">Pouze PDF soubory (max 50 MB)</p>
                                 </div>
@@ -77,7 +77,7 @@
 
                 {{-- Upload progress --}}
                 <div wire:loading wire:target="pdfFile" class="flex items-center gap-2 mt-2">
-                    <svg class="animate-spin h-4 w-4 text-slate-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg class="animate-spin h-4 w-4 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                     </svg>
@@ -92,7 +92,7 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Titul <span class="text-red-500">*</span></label>
                 <select wire:model="title_id" required
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <option value="">Vyberte titul</option>
                     @foreach($titles as $title)
                         <option value="{{ $title->id }}">{{ $title->name }}</option>
@@ -104,7 +104,7 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Název</label>
                 <input type="text" wire:model="name" placeholder="Název PDF"
-                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                       class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                 @error('name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
             </div>
 
@@ -112,13 +112,13 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Číslo strany</label>
                     <input type="number" wire:model="page_number" min="1"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('page_number') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Název vydání</label>
                     <input type="text" wire:model="issue_title" placeholder="např. Číslo 24/2024"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('issue_title') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
             </div>
@@ -127,13 +127,13 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Uzávěrka – datum <span class="text-red-500">*</span></label>
                     <input type="date" wire:model="deadline_date" required lang="cs-CZ"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('deadline_date') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Uzávěrka – čas <span class="text-red-500">*</span></label>
                     <input type="time" wire:model="deadline_time" required lang="cs-CZ"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('deadline_time') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
             </div>
@@ -141,7 +141,7 @@
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Přiřadit korektorovi</label>
                 <select wire:model="assigned_to_user_id"
-                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <option value="">Nepřiřazovat konkrétnímu korektorovi</option>
                     @foreach($proofreaders as $proofreader)
                         <option value="{{ $proofreader->id }}">{{ $proofreader->name }}</option>
@@ -152,7 +152,7 @@
 
             <div class="flex justify-end">
                 <button type="submit" wire:loading.attr="disabled"
-                        class="bg-slate-800 text-white py-2 px-6 rounded-md hover:bg-slate-700 transition font-medium disabled:opacity-50">
+                        class="bg-orange-600 text-white py-2 px-6 rounded-md hover:bg-orange-700 transition font-medium disabled:opacity-50">
                     <span wire:loading.remove>Nahrát PDF</span>
                     <span wire:loading>Ukládání...</span>
                 </button>

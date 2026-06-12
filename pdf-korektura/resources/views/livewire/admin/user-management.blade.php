@@ -1,8 +1,8 @@
 <div>
     <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-slate-800">Správa uživatelů</h2>
+        <h2 class="text-2xl font-bold text-orange-600">Správa uživatelů</h2>
         <button wire:click="toggleCreateForm"
-                class="bg-slate-800 text-white py-2 px-4 rounded-md hover:bg-slate-700 transition font-medium text-sm">
+                class="bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition font-medium text-sm">
             @if($showCreateForm)
                 Zrušit
             @else
@@ -20,33 +20,33 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Jméno a příjmení <span class="text-red-500">*</span></label>
                         <input type="text" wire:model="newName" required placeholder="Jan Novák"
-                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                         @error('newName') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Uživatelské jméno <span class="text-red-500">*</span></label>
                         <input type="text" wire:model="newUsername" required placeholder="jnovak"
-                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                         @error('newUsername') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-red-500">*</span></label>
                     <input type="email" wire:model="newEmail" required placeholder="jnovak@example.cz"
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('newEmail') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Heslo <span class="text-red-500">*</span></label>
                         <input type="password" wire:model="newPassword" required placeholder="Min. 6 znaků"
-                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                         @error('newPassword') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Potvrzení hesla <span class="text-red-500">*</span></label>
                         <input type="password" wire:model="newPasswordConfirmation" required placeholder="Zopakujte heslo"
-                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     </div>
                 </div>
                 <div>
@@ -55,7 +55,7 @@
                         @foreach($roles as $role)
                             <label class="flex items-center bg-gray-50 px-3 py-2 rounded-md border border-gray-200 cursor-pointer hover:bg-gray-100">
                                 <input type="checkbox" wire:model="newRoles" value="{{ $role->name }}"
-                                       class="h-4 w-4 text-slate-600 border-gray-300 rounded">
+                                       class="h-4 w-4 text-orange-600 border-gray-300 rounded">
                                 <span class="ml-2 text-sm text-gray-700 font-medium">{{ $role->name }}</span>
                             </label>
                         @endforeach
@@ -82,7 +82,7 @@
                         @foreach($roles as $role)
                             <label class="flex items-center">
                                 <input type="checkbox" wire:model="selectedRoles" value="{{ $role->name }}"
-                                       class="h-4 w-4 text-slate-600 border-gray-300 rounded">
+                                       class="h-4 w-4 text-orange-600 border-gray-300 rounded">
                                 <span class="ml-2 text-sm text-gray-700">{{ $role->name }}</span>
                             </label>
                         @endforeach
@@ -92,7 +92,7 @@
                     <button type="button" wire:click="cancelEdit"
                             class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">Zrušit</button>
                     <button type="submit"
-                            class="bg-slate-800 text-white py-2 px-6 rounded-md hover:bg-slate-700 transition font-medium">Uložit</button>
+                            class="bg-orange-600 text-white py-2 px-6 rounded-md hover:bg-orange-700 transition font-medium">Uložit</button>
                 </div>
             </form>
         </div>
@@ -101,7 +101,7 @@
     <div class="bg-white rounded-lg shadow mb-6">
         <div class="p-4 border-b border-gray-200">
             <input wire:model.live.debounce.300ms="search" type="text" placeholder="Hledat uživatele..."
-                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 w-80">
+                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 w-80">
         </div>
 
         <div class="overflow-x-auto">
@@ -123,11 +123,11 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $user->username ?? '-' }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                 @foreach($user->roles as $role)
-                                    <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs mr-1">{{ $role->name }}</span>
+                                    <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs mr-1">{{ $role->name }}</span>
                                 @endforeach
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-3">
-                                <button wire:click="editUser({{ $user->id }})" class="text-slate-600 hover:text-slate-900">Upravit role</button>
+                                <button wire:click="editUser({{ $user->id }})" class="text-orange-600 hover:text-orange-800">Upravit role</button>
                                 @if($user->id !== auth()->id())
                                     <button wire:click="deleteUser({{ $user->id }})"
                                             wire:confirm="Opravdu chcete smazat uživatele {{ $user->name }}?"

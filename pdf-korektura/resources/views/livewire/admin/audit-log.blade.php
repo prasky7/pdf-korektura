@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl font-bold text-slate-800 mb-6">Audit log</h2>
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Audit log</h2>
 
     <div class="bg-white rounded-lg shadow mb-6">
         {{-- Filters --}}
@@ -7,7 +7,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Akce</label>
-                    <select wire:model.live="actionFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <select wire:model.live="actionFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                         <option value="">Všechny akce</option>
                         @foreach($actions as $action)
                             <option value="{{ $action }}">{{ $action }}</option>
@@ -16,7 +16,7 @@
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Uživatel</label>
-                    <select wire:model.live="userFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <select wire:model.live="userFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                         <option value="">Všichni uživatelé</option>
                         @foreach($users as $user)
                             <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Titul</label>
-                    <select wire:model.live="titleFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <select wire:model.live="titleFilter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                         <option value="">Všechny tituly</option>
                         @foreach($titles as $title)
                             <option value="{{ $title->id }}">{{ $title->name }}</option>
@@ -35,28 +35,28 @@
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Název PDF</label>
                     <input wire:model.live.debounce.300ms="pdfNameSearch" type="text" placeholder="Hledat název PDF..."
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Datum akce od</label>
-                    <input type="date" wire:model.live="dateFrom" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <input type="date" wire:model.live="dateFrom" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Datum akce do</label>
-                    <input type="date" wire:model.live="dateTo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <input type="date" wire:model.live="dateTo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Deadline od</label>
-                    <input type="date" wire:model.live="deadlineFrom" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <input type="date" wire:model.live="deadlineFrom" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                 </div>
                 <div>
                     <label class="block text-xs font-medium text-gray-500 mb-1">Deadline do</label>
-                    <input type="date" wire:model.live="deadlineTo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm">
+                    <input type="date" wire:model.live="deadlineTo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm">
                 </div>
             </div>
             <div class="mt-3">
                 <input wire:model.live.debounce.300ms="search" type="text" placeholder="Hledat v detailech..."
-                       class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 text-sm w-64">
+                       class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm w-64">
             </div>
         </div>
 
@@ -82,11 +82,11 @@
                             <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">{{ $log->created_at->format('d.m.Y H:i:s') }}</td>
                             <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $log->user?->name ?? 'Systém' }}</td>
                             <td class="px-4 py-4 whitespace-nowrap">
-                                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">{{ $log->actionLabel() }}</span>
+                                <span class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">{{ $log->actionLabel() }}</span>
                             </td>
                             <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
                                 @if($log->pdfDocument)
-                                    <a href="{{ route('pdf.detail', $log->pdfDocument) }}" class="text-slate-600 hover:underline">{{ $log->pdfDocument->name }}</a>
+                                    <a href="{{ route('pdf.detail', $log->pdfDocument) }}" class="text-orange-600 hover:underline">{{ $log->pdfDocument->name }}</a>
                                 @else
                                     -
                                 @endif
@@ -96,9 +96,9 @@
                                     {{ $log->pdfVersion->original_filename ?? basename($log->pdfVersion->file_path) }}
                                     <div class="mt-1 space-x-2">
                                         <a href="{{ route('pdf.preview.silent', $log->pdfDocument) }}" target="_blank"
-                                           class="text-slate-500 hover:text-slate-800 text-xs">Náhled</a>
+                                           class="text-orange-500 hover:text-orange-700 text-xs">Náhled</a>
                                         <a href="{{ route('pdf.download.silent', ['pdfDocument' => $log->pdfDocument, 'version' => $log->pdfVersion->version_number]) }}"
-                                           class="text-slate-500 hover:text-slate-800 text-xs">Stáhnout</a>
+                                           class="text-orange-500 hover:text-orange-700 text-xs">Stáhnout</a>
                                     </div>
                                 @else
                                     -

@@ -1,11 +1,11 @@
 <div>
-    <h2 class="text-2xl font-bold text-slate-800 mb-6">Nepřiřazené PDF ke korekci</h2>
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Nepřiřazené PDF ke korekci</h2>
 
     <div class="bg-white rounded-lg shadow mb-6">
         <div class="p-4 border-b border-gray-200 flex flex-wrap gap-4 items-center">
             <input wire:model.live.debounce.300ms="search" type="text" placeholder="Hledat..."
-                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 w-64">
-            <select wire:model.live="titleFilter" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 w-64">
+            <select wire:model.live="titleFilter" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                 <option value="">Všechny tituly</option>
                 @foreach($titles as $title)
                     <option value="{{ $title->id }}">{{ $title->name }}</option>
@@ -40,9 +40,9 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $pdf->uploadedBy->name }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="{{ route('pdf.preview', $pdf) }}" target="_blank" class="text-slate-600 hover:text-slate-900 mr-3">Náhled</a>
+                                <a href="{{ route('pdf.preview', $pdf) }}" target="_blank" class="text-orange-600 hover:text-orange-800 mr-3">Náhled</a>
                                 <button wire:click="assignToMe({{ $pdf->id }})" wire:loading.attr="disabled"
-                                        class="bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700 text-sm disabled:opacity-50">
+                                        class="bg-gray-900 text-white px-3 py-1 rounded-md hover:bg-black text-sm disabled:opacity-50">
                                     Přiřadit si
                                 </button>
                             </td>

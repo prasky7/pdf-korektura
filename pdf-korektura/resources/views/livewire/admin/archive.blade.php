@@ -1,7 +1,7 @@
 <div>
     <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-slate-800">Archiv</h2>
-        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm font-medium">
+        <h2 class="text-2xl font-bold text-orange-600">Archiv</h2>
+        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
             Celkem archivovaných: {{ $totalArchived }}
         </span>
     </div>
@@ -10,8 +10,8 @@
         {{-- Filters --}}
         <div class="p-4 border-b border-gray-200 flex flex-wrap gap-4 items-center">
             <input wire:model.live.debounce.300ms="search" type="text" placeholder="Hledat..."
-                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 w-64">
-            <select wire:model.live="titleFilter" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 w-64">
+            <select wire:model.live="titleFilter" class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                 <option value="">Všechny tituly</option>
                 @foreach($titles as $title)
                     <option value="{{ $title->id }}">{{ $title->name }}</option>
@@ -42,8 +42,8 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $pdf->issue_title ?? '-' }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
-                                    @if($pdf->status === 'uploaded') bg-gray-100 text-gray-800
-                                    @elseif($pdf->status === 'in_progress') bg-blue-100 text-blue-800
+                                    @if($pdf->status === 'uploaded') bg-blue-100 text-blue-800
+                                    @elseif($pdf->status === 'in_progress') bg-pink-100 text-pink-800
                                     @elseif($pdf->status === 'returned') bg-yellow-100 text-yellow-800
                                     @elseif($pdf->status === 'completed') bg-green-100 text-green-800
                                     @endif">
@@ -54,9 +54,9 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $pdf->uploadedBy?->name ?? '-' }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $pdf->archived_at->format('d.m.Y H:i') }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-3">
-                                <a href="{{ route('pdf.download', $pdf) }}" class="text-slate-600 hover:text-slate-900">Stáhnout</a>
+                                <a href="{{ route('pdf.download', $pdf) }}" class="text-orange-600 hover:text-orange-800">Stáhnout</a>
                                 <button wire:click="unarchive({{ $pdf->id }})"
-                                        class="text-blue-600 hover:text-blue-900">Obnovit</button>
+                                        class="text-gray-900 hover:text-black">Obnovit</button>
                                 <button wire:click="deleteArchived({{ $pdf->id }})"
                                         wire:confirm="Opravdu chcete smazat toto archivované PDF včetně všech verzí?"
                                         class="text-red-600 hover:text-red-900">Smazat</button>

@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl font-bold text-slate-800 mb-6">Moje přiřazená PDF</h2>
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Moje přiřazená PDF</h2>
 
     @if($uploadingForPdfId)
         <div class="bg-white rounded-lg shadow p-6 mb-6">
@@ -34,8 +34,8 @@
                 >
                     <label class="block text-sm font-medium text-gray-700 mb-1">Opravené PDF</label>
 
-                    <div :class="dragging ? 'border-slate-500 bg-slate-50' : 'border-gray-300 bg-gray-50'"
-                         class="relative border-2 border-dashed rounded-lg p-6 text-center transition-colors cursor-pointer hover:border-slate-400 hover:bg-slate-50">
+                    <div :class="dragging ? 'border-orange-500 bg-orange-50' : 'border-gray-300 bg-gray-50'"
+                         class="relative border-2 border-dashed rounded-lg p-6 text-center transition-colors cursor-pointer hover:border-orange-400 hover:bg-orange-50">
 
                         <input type="file"
                                wire:model="correctedPdf"
@@ -52,9 +52,9 @@
                                     </svg>
                                     <div>
                                         <p class="text-sm text-gray-600">
-                                            <span class="font-semibold text-slate-700">Pøetáhnìte PDF sem</span>
+                                            <span class="font-semibold text-orange-700">Pøetáhnìte PDF sem</span>
                                             <span class="text-gray-400 mx-1">nebo</span>
-                                            <span class="font-semibold text-slate-700 underline">kliknìte pro výbìr</span>
+                                            <span class="font-semibold text-orange-700 underline">kliknìte pro výbìr</span>
                                         </p>
                                         <p class="text-xs text-gray-400 mt-1">Pouze PDF soubory (max 50 MB)</p>
                                     </div>
@@ -75,7 +75,7 @@
                     </div>
 
                     <div wire:loading wire:target="correctedPdf" class="flex items-center gap-2 mt-2">
-                        <svg class="animate-spin h-4 w-4 text-slate-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <svg class="animate-spin h-4 w-4 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                         </svg>
@@ -89,18 +89,18 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Popis změn</label>
                     <textarea wire:model="changeSummary" rows="3" placeholder="Stručný popis provedených změn..."
-                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"></textarea>
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
                     @error('changeSummary') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div class="flex items-center">
-                    <input type="checkbox" wire:model="returnForRevision" id="returnForRevision" class="h-4 w-4 text-slate-600 border-gray-300 rounded">
+                    <input type="checkbox" wire:model="returnForRevision" id="returnForRevision" class="h-4 w-4 text-orange-600 border-gray-300 rounded">
                     <label for="returnForRevision" class="ml-2 text-sm text-gray-600">Vrátit k další úpravě (ne archivovat)</label>
                 </div>
                 <div class="flex justify-end space-x-3">
                     <button type="button" wire:click="cancelUpload"
                             class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">Zrušit</button>
                     <button type="submit" wire:loading.attr="disabled"
-                            class="bg-slate-800 text-white py-2 px-6 rounded-md hover:bg-slate-700 transition font-medium disabled:opacity-50">
+                            class="bg-orange-600 text-white py-2 px-6 rounded-md hover:bg-orange-700 transition font-medium disabled:opacity-50">
                         <span wire:loading.remove>Nahrát opravu</span>
                         <span wire:loading>Ukládání...</span>
                     </button>
@@ -133,8 +133,8 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">v{{ $pdf->current_version_number }}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-2">
-                                <a href="{{ route('pdf.preview', $pdf) }}" target="_blank" class="text-slate-600 hover:text-slate-900">Náhled</a>
-                                <a href="{{ route('pdf.download', $pdf) }}" class="text-slate-600 hover:text-slate-900">Stáhnout</a>
+                                <a href="{{ route('pdf.preview', $pdf) }}" target="_blank" class="text-orange-600 hover:text-orange-800">Náhled</a>
+                                <a href="{{ route('pdf.download', $pdf) }}" class="text-orange-600 hover:text-orange-800">Stáhnout</a>
                                 <button wire:click="startUpload({{ $pdf->id }})" class="text-green-600 hover:text-green-900">Nahrát opravu</button>
                                 <button wire:click="releasePdf({{ $pdf->id }})" class="text-red-600 hover:text-red-900">Uvolnit</button>
                             </td>

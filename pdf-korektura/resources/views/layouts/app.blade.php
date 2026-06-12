@@ -8,23 +8,23 @@
     @livewireStyles
 </head>
 <body class="bg-gray-50 text-gray-800 min-h-screen">
-    <nav class="bg-slate-800 text-white shadow-lg">
+    <nav class="bg-orange-600 text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                     <a href="{{ route('dashboard') }}" class="text-xl font-bold tracking-tight">PDF Korektura</a>
                     @auth
                         <div class="hidden md:flex space-x-2 ml-6">
-                            <a href="{{ route('dashboard') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 {{ request()->routeIs('dashboard') ? 'bg-slate-700' : '' }}">Dashboard</a>
+                            <a href="{{ route('dashboard') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-orange-700 {{ request()->routeIs('dashboard') ? 'bg-orange-700' : '' }}">Dashboard</a>
                             @if(auth()->user()->isEditor() || auth()->user()->isAdmin())
-                                <a href="{{ route('pdf.upload') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 {{ request()->routeIs('pdf.upload') ? 'bg-slate-700' : '' }}">Nahrát PDF</a>
+                                <a href="{{ route('pdf.upload') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-orange-700 {{ request()->routeIs('pdf.upload') ? 'bg-orange-700' : '' }}">Nahrát PDF</a>
                             @endif
                             @if(auth()->user()->isProofreader() || auth()->user()->isAdmin())
-                                <a href="{{ route('pdf.pool') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 {{ request()->routeIs('pdf.pool') ? 'bg-slate-700' : '' }}">Nepřiřazené PDF</a>
-                                <a href="{{ route('pdf.assignments') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 {{ request()->routeIs('pdf.assignments') ? 'bg-slate-700' : '' }}">Moje přiřazení</a>
+                                <a href="{{ route('pdf.pool') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-orange-700 {{ request()->routeIs('pdf.pool') ? 'bg-orange-700' : '' }}">Nepřiřazené PDF</a>
+                                <a href="{{ route('pdf.assignments') }}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-orange-700 {{ request()->routeIs('pdf.assignments') ? 'bg-orange-700' : '' }}">Moje přiřazení</a>
                             @endif
                             @if(auth()->user()->isAdmin())
                                 <div x-data="{ open: false }" class="relative">
-                                    <button @click="open = !open" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 flex items-center">
+                                    <button @click="open = !open" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-orange-700 flex items-center">
                                         Admin
                                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                     </button>
@@ -41,7 +41,7 @@
                 </div>
                 @auth
                     <div class="flex items-center space-x-4">
-                        <span class="text-sm text-slate-300">{{ auth()->user()->name }}</span>
+                        <span class="text-sm text-orange-100">{{ auth()->user()->name }}</span>
                         <form method="POST" action="{{ route('logout') }}" class="inline">
                             @csrf
                             <button type="submit" class="px-3 py-2 rounded-md text-sm font-medium bg-red-600 hover:bg-red-700">Odhlásit</button>

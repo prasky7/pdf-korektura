@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl font-bold text-slate-800 mb-6">Správa titulů</h2>
+    <h2 class="text-2xl font-bold text-orange-600 mb-6">Správa titulů</h2>
 
     @if($editingTitleId !== null)
         <div class="bg-white rounded-lg shadow p-6 mb-6">
@@ -8,30 +8,30 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Název <span class="text-red-500">*</span></label>
                     <input type="text" wire:model="name" required
-                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
                     @error('name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Popis</label>
                     <textarea wire:model="description" rows="3"
-                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"></textarea>
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
                     @error('description') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                 </div>
                 <div class="flex items-center">
-                    <input type="checkbox" wire:model="is_active" id="is_active" class="h-4 w-4 text-slate-600 border-gray-300 rounded">
+                    <input type="checkbox" wire:model="is_active" id="is_active" class="h-4 w-4 text-orange-600 border-gray-300 rounded">
                     <label for="is_active" class="ml-2 text-sm text-gray-600">Aktivní</label>
                 </div>
                 <div class="flex justify-end space-x-3">
                     <button type="button" wire:click="cancelEdit"
                             class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">Zrušit</button>
                     <button type="submit"
-                            class="bg-slate-800 text-white py-2 px-6 rounded-md hover:bg-slate-700 transition font-medium">Uložit</button>
+                            class="bg-orange-600 text-white py-2 px-6 rounded-md hover:bg-orange-700 transition font-medium">Uložit</button>
                 </div>
             </form>
         </div>
     @else
         <div class="mb-4">
-            <button wire:click="create" class="bg-slate-800 text-white py-2 px-4 rounded-md hover:bg-slate-700 transition font-medium">
+            <button wire:click="create" class="bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition font-medium">
                 + Nový titul
             </button>
         </div>
@@ -40,7 +40,7 @@
     <div class="bg-white rounded-lg shadow mb-6">
         <div class="p-4 border-b border-gray-200">
             <input wire:model.live.debounce.300ms="search" type="text" placeholder="Hledat tituly..."
-                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500 w-80">
+                   class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 w-80">
         </div>
 
         <div class="overflow-x-auto">
@@ -66,7 +66,7 @@
                                 @endif
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-2">
-                                <button wire:click="edit({{ $title->id }})" class="text-slate-600 hover:text-slate-900">Upravit</button>
+                                <button wire:click="edit({{ $title->id }})" class="text-orange-600 hover:text-orange-800">Upravit</button>
                                 <button wire:click="delete({{ $title->id }})" wire:confirm="Opravdu chcete smazat tento titul?"
                                         class="text-red-600 hover:text-red-900">Smazat</button>
                             </td>
